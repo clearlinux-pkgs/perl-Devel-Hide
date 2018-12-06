@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0010
-Release  : 7
+Release  : 8
 URL      : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
 Summary  : 'Forces the unavailability of specified Perl modules (for testing)'

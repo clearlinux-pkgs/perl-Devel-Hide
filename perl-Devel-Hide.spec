@@ -4,10 +4,10 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0010
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
-Summary  : 'Forces the unavailability of specified Perl modules (for testing)'
+Summary  : Forces the unavailability of specified Perl modules (for testing)
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -22,6 +22,7 @@ installed Perl modules. Used like this:
 Summary: dev components for the perl-Devel-Hide package.
 Group: Development
 Provides: perl-Devel-Hide-devel = %{version}-%{release}
+Requires: perl-Devel-Hide = %{version}-%{release}
 
 %description dev
 dev components for the perl-Devel-Hide package.

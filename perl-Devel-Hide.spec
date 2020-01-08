@@ -4,12 +4,13 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0010
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hide-0.0010.tar.gz
-Summary  : Forces the unavailability of specified Perl modules (for testing)
+Summary  : 'Forces the unavailability of specified Perl modules (for testing)'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Devel-Hide-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -28,14 +29,24 @@ Requires: perl-Devel-Hide = %{version}-%{release}
 dev components for the perl-Devel-Hide package.
 
 
+%package perl
+Summary: perl components for the perl-Devel-Hide package.
+Group: Default
+Requires: perl-Devel-Hide = %{version}-%{release}
+
+%description perl
+perl components for the perl-Devel-Hide package.
+
+
 %prep
 %setup -q -n Devel-Hide-0.0010
+cd %{_builddir}/Devel-Hide-0.0010
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -45,7 +56,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -65,8 +76,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Devel/Hide.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Devel::Hide.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Devel/Hide.pm

@@ -4,10 +4,10 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0013
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0013.tar.gz
-Summary  : Forces the unavailability of specified Perl modules (for testing)
+Summary  : 'Forces the unavailability of specified Perl modules (for testing)'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Devel-Hide-perl = %{version}-%{release}
@@ -23,7 +23,6 @@ installed Perl modules. Used like this:
 Summary: dev components for the perl-Devel-Hide package.
 Group: Development
 Provides: perl-Devel-Hide-devel = %{version}-%{release}
-Requires: perl-Devel-Hide = %{version}-%{release}
 Requires: perl-Devel-Hide = %{version}-%{release}
 
 %description dev
@@ -84,4 +83,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Devel/Hide.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Devel/Hide.pm

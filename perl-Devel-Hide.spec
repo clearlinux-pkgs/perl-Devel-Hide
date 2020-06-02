@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0013
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0013.tar.gz
 Summary  : 'Forces the unavailability of specified Perl modules (for testing)'
@@ -83,4 +83,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Devel/Hide.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Devel/Hide.pm

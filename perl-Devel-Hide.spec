@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Hide
 Version  : 0.0015
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0015.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0015.tar.gz
 Summary  : 'Forces the unavailability of specified Perl modules (for testing)'
@@ -83,4 +83,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Devel/Hide.pm
+/usr/lib/perl5/*
